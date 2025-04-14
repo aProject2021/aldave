@@ -186,6 +186,11 @@ header {
   max-width: 50%;
 }
 
+.intro-right {
+  display: flex;
+  justify-content: end;
+}
+
 .intro-left p {
   font-size: 1rem;
   line-height: 1.6;
@@ -197,6 +202,7 @@ header {
   text-align: right;
   color: var(--primary);
   padding-left: 2rem;
+  width: 45%;
 }
 
 @media (max-width: 768px) {
@@ -209,6 +215,13 @@ header {
   .intro-right {
     flex: none;
     max-width: 100%;
+  }
+  .intro-right {
+    display: flex;
+    justify-content: start;
+  }
+  .intro-right h2 {
+    width: 100%;
   }
   .intro-right h2 {
     text-align: left;
@@ -352,19 +365,24 @@ header {
     width: 22px;
     height: 22px;
   }
+
   .services-title {
     text-align: left;
   }
-  .services-left{
-    max-width: 100%; 
-  }
-  .services-list{
+
+  .services-left {
     max-width: 100%;
   }
+
+  .services-list {
+    max-width: 100%;
+  }
+
   .gallery {
     width: 300px;
     height: 300px;
   }
+
   .gallery .imagen {
     width: 300px;
     height: 250px;
