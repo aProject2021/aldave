@@ -87,7 +87,6 @@ header {
 }
 
 .hero h1 {
-  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
@@ -193,7 +192,6 @@ header {
 }
 
 .intro-left p {
-  font-size: 1rem;
   line-height: 1.6;
   text-align: left;
   padding-right: 2rem;
@@ -464,7 +462,6 @@ header {
   border-radius: 25px;
   background-color: var(--primary);
   color: white;
-  font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -516,7 +513,6 @@ header {
 
 .branding-text .description {
   color: var(--texto);
-  font-size: 1rem;
   line-height: 1.6;
   max-width: 600px;
   padding-bottom: 2rem;
@@ -565,9 +561,6 @@ header {
     display: block;
   }
 
-  .branding-title {
-    font-size: 2rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -620,7 +613,6 @@ header {
 }
 
 .seo-description {
-  font-size: 1rem;
   color: var(--texto);
   line-height: 1.6;
 }
@@ -648,14 +640,15 @@ header {
 .seo-card img {
   border-radius: 1rem;
   width: 100%;
-  height: 250px;         /* altura fija */
-  object-fit: cover;     /* mantiene proporción y recorta si es necesario */
+  height: 250px;
+  /* altura fija */
+  object-fit: cover;
+  /* mantiene proporción y recorta si es necesario */
   margin-bottom: 1rem;
 }
 
 
 .seo-subtitle {
-  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -703,9 +696,95 @@ header {
   .seo-arrow {
     display: none;
   }
-  .seo-card{
+
+  .seo-card {
     width: 100%;
   }
 }
 
 /*======================END SECCION SERVICIO SEO====================*/
+/*======================SECCION SERVICIO REDES====================*/
+
+.social-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem;
+  background-color: var(--fondo-white);
+}
+
+.social-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.social-content h2 {
+  color: #4e00b6;
+  margin-bottom: 1rem;
+}
+
+.social-content p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+}
+
+.social-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.social-list img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-video {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.video-desktop,
+.video-mobile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  border-radius: 1.5rem;
+}
+
+/* Mostrar solo video desktop */
+.video-desktop {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .social-section {
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .video-desktop {
+    display: none;
+  }
+
+  .video-mobile {
+    display: block;
+  }
+}
+
+/*======================END SECCION SERVICIO REDES====================*/
