@@ -210,8 +210,8 @@ header {
   .intro {
     flex-direction: column-reverse;
     padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .intro-left,
   .intro-right {
@@ -371,8 +371,8 @@ header {
     height: 22px;
   }
   .services{
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .services-title {
     text-align: left;
