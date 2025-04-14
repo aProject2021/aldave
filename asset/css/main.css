@@ -42,9 +42,9 @@ header {
   padding: 2rem;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.8rem;
+.logo img{
+  width: 150px;
+  height: 35px;
 }
 
 /* NAV LINKS */
