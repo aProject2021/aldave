@@ -3,6 +3,7 @@
   --primary: #4E008E;
   --secundary: #FF6600;
   --texto: #585656;
+  --fondo-white: #FFFFFF;
 }
 
 @font-face {
@@ -25,7 +26,7 @@
 body {
   font-family: 'lato-regular';
   background: linear-gradient(135deg, #f60, #7f1d93);
-  color: white;
+  color: var(--fondo-white);
   height: 100vh;
   overflow-x: hidden;
 }
@@ -42,7 +43,7 @@ header {
   padding: 2rem;
 }
 
-.logo img{
+.logo img {
   width: 150px;
   height: 35px;
 }
@@ -56,14 +57,14 @@ header {
 }
 
 .nav-links li a {
-  color: white;
+  color: var(--fondo-white);
   text-decoration: none;
   font-weight: 500;
 }
 
 /* BOTÓN OUTLINE */
 .btn-outline {
-  border: 2px solid white;
+  border: 2px solid var(--fondo-white);
   padding: 0.5rem 1rem;
   border-radius: 25px;
   transition: background 0.3s, color 0.3s;
@@ -71,7 +72,7 @@ header {
 }
 
 .btn-outline:hover {
-  background: white;
+  background: var(--fondo-white);
   color: var(--primary);
 }
 
@@ -107,7 +108,7 @@ header {
 .menu-toggle span {
   height: 2px;
   width: 25px;
-  background: white;
+  background: var(--fondo-white);
   transition: 0.3s;
 }
 
@@ -172,7 +173,7 @@ header {
 .intro {
   display: flex;
   padding: 4rem;
-  background-color: white;
+  background-color: var(--fondo-white);
   color: var(--texto);
   gap: 2rem;
   flex-direction: row;
@@ -208,21 +209,25 @@ header {
 @media (max-width: 768px) {
   .intro {
     flex-direction: column-reverse;
-    padding-bottom: 2rem
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-
   .intro-left,
   .intro-right {
     flex: none;
     max-width: 100%;
   }
+
   .intro-right {
     display: flex;
     justify-content: start;
   }
+
   .intro-right h2 {
     width: 100%;
   }
+
   .intro-right h2 {
     text-align: left;
     padding-left: 0px;
@@ -239,7 +244,7 @@ header {
   padding-bottom: 4rem;
   padding-right: 4rem;
   gap: 2rem;
-  background-color: #FFFFFF;
+  background-color: var(--fondo-white);
 }
 
 .services-title {
@@ -365,7 +370,10 @@ header {
     width: 22px;
     height: 22px;
   }
-
+  .services{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .services-title {
     text-align: left;
   }
@@ -390,3 +398,82 @@ header {
 }
 
 /*===================END SECCION 1==============================*/
+/*====================== SECCION SERVICIO WEB====================*/
+.servicio-web {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 80px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: var(--fondo-white);
+}
+
+.contenido {
+  max-width: 500px;
+  flex: 1;
+}
+
+.contenido h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.contenido p {
+  color: var(--texto);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.botones-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.boton-outline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border: 1.5px solid var(--secundary);
+  border-radius: 25px;
+  background-color: white;
+  color: var(--texto);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-outline span {
+  font-size: 20px;
+}
+
+.boton-outline:hover {
+  background-color: var(--fondo-white);
+}
+
+.boton-principal {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton-principal:hover {
+  background-color: var(--primary);
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*======================END SECCION SERVICIO WEB====================*/
