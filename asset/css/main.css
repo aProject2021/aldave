@@ -469,16 +469,19 @@ header {
 .boton-principal:hover {
   background-color: var(--primary);
 }
-
-.servicio-web-imagen img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
+.servicio-web-imagen{
+  flex: 1;
   display: block;
+}
+.servicio-web-imagen img {
+  max-width: 100%;
+  border-radius: 20px;
+  
 }
 
 @media (max-width: 768px) {
   .servicio-web {
+    flex-direction: column;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 0px;
@@ -522,11 +525,6 @@ header {
   color: var(--primary);
   font-weight: 700;
 }
-
-.branding-image-desktop {
-  display: none;
-}
-
 .mobile-only {
   display: none;
 }
@@ -721,12 +719,12 @@ header {
 }
 
 .social-content h2 {
-  color: #4e00b6;
+  color: var(--primary);
   margin-bottom: 1rem;
 }
 
 .social-content p {
-  color: #444;
+  color: var(--texto);
   margin-bottom: 1.5rem;
 }
 
@@ -740,7 +738,7 @@ header {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  color: #444;
+  color: var(--texto);
 }
 
 .social-list img {
@@ -788,3 +786,89 @@ header {
 }
 
 /*======================END SECCION SERVICIO REDES====================*/
+/*======================SECCION SERVICIO DATA====================*/
+
+.data-section {
+  padding: 4rem;
+  margin: 0 auto;
+  background-color: var(--fondo-white);
+}
+
+.data-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.circle-icon {
+  width: 55px;
+  height: 55px;
+  border: 1px solid var(--secundary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.data-header h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 2rem; /* Espacio entre columnas y filas */
+  padding: 2rem 0;
+}
+
+.data-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+/* Franja naranja superior */
+.data-bar {
+  height: 12px;
+  background-color: #ff6600;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.data-img{
+  background-color: #ff6600;
+}
+.data-card:hover {
+  transform: translateY(-5px);
+}
+
+.data-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.data-card p {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+@media (max-width: 992px) {
+  .data-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*======================END SECCION SERVICIO DATA====================*/
