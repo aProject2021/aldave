@@ -582,7 +582,16 @@ header {
     padding-right: 2rem;
     gap: 0;
   }
+  .branding-image-desktop {
+    display: block;
+    flex: 1;
+  }
 
+  .branding-image-desktop img {
+    max-width: 100%;
+    border-radius: 20px;
+    display: block;
+  }
   .branding-content {
     display: flex;
     flex-direction: column;
@@ -1015,7 +1024,7 @@ textarea:not(:placeholder-shown) + label {
   border-radius: 20px;
   cursor: pointer;
   transition: background 0.3s ease;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .btn-submit:hover {
