@@ -594,11 +594,6 @@ header {
     flex: 1;
   }
 
-  .branding-image-desktop img {
-    max-width: 100%;
-    border-radius: 20px;
-    display: block;
-  }
   .description {
     padding-top: 1rem;
   }
@@ -845,7 +840,6 @@ header {
 .data-card {
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.3s;
 }
@@ -888,3 +882,143 @@ header {
   }
 }
 /*======================END SECCION SERVICIO DATA====================*/
+/*======================FOOTER====================*/
+.footer-contact {
+  background: linear-gradient(to right, #f26a00, #902278);
+  color: #fff;
+  padding: 80px 60px;
+  font-family: 'lato-regular';
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-left h2 {
+  font-family: 'lato-bold';
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+ 
+}
+.footer-libro{
+  padding-top: 1rem;
+}
+.footer-libro img{
+  width: 55px;
+  height: 55px;
+}
+.footer-left h2 span {
+  display: block;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.footer-info a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-social {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+  flex: 1;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 10px 0 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group label{
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  top: -15px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.footer-icon{
+  padding-bottom: 2rem;
+}
+.footer-icon img{
+  width: 150px;
+  height: 150px;
+}
+.btn-submit {
+  align-self: center; /* <-- antes era flex-end */
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/*======================END FOOTER====================*/
