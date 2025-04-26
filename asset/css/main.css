@@ -953,7 +953,7 @@ header {
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 3rem;
 }
 
 .form-row {
@@ -1015,6 +1015,7 @@ textarea:not(:placeholder-shown) + label {
   border-radius: 20px;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-size: 18px;
 }
 
 .btn-submit:hover {
