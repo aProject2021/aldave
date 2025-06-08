@@ -15,14 +15,23 @@
   font-family: 'lato-regular';
   src: url("../font/Lato/Lato-Regular.ttf") format('woff2');
 }
-
+@font-face {
+  font-family: 'archivo-black-regular';
+  src: url("../font/Archivo_Black/ArchivoBlack-Regular.ttf") format('woff2');
+}
+@font-face {
+  font-family: 'inter-bold';
+  src: url("../font/Inter/Inter_24pt-Bold.ttf") format('woff2');
+}
 /* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'lato-regular';
   background: linear-gradient(135deg, #f60, #7f1d93);
@@ -35,7 +44,14 @@ header {
   position: relative;
   z-index: 1100;
 }
-
+.hero-content h1{
+  font-family: 'archivo-black-regular';
+  font-size: 36px;
+}
+h2{
+  font-family: 'inter-bold';
+  font-size: 36px;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -201,7 +217,7 @@ header {
   text-align: right;
   color: var(--primary);
   padding-left: 2rem;
-  width: 45%;
+  width: 70%;
 }
 
 @media (max-width: 768px) {
