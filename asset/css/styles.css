@@ -44,9 +44,12 @@ header {
   position: relative;
   z-index: 1100;
 }
-.hero-content{
+
+.hero-content {
+  margin-top: -55px;
   text-align: center;
 }
+
 .hero-content h1 {
   font-family: 'circular-sdk-black';
   font-size: 36px;
@@ -199,6 +202,7 @@ h2 {
   .hero-content h1 {
     font-size: 24px;
   }
+
   .nav-links {
     flex-direction: column;
     position: fixed;
@@ -1119,9 +1123,10 @@ textarea:not(:placeholder-shown)+label {
 }
 
 @media (max-width: 768px) {
-  .footer-contact{
+  .footer-contact {
     padding: 80px 30px;
   }
+
   .footer-icon img {
     width: 55px;
     height: 55px;
