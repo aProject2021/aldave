@@ -31,24 +31,28 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+  const anchoPantalla = window.innerWidth;
+  let rawText = "El arte de construir marcas\nque hacen la diferencia";
+  if (anchoPantalla <= 768) {
+    rawText = "El arte de construir marcas que hacen la diferencia";
+  }
 
-   const rawText = "El arte de construir marcas\nque hacen la diferencia";
-    const h1 = document.getElementById("typed");
-    let i = 0;
+  const h1 = document.getElementById("typed");
+  let i = 0;
 
-    function type() {
-      if (i <= rawText.length) {
-        // Tomamos solo la parte escrita hasta ahora
-        const partial = rawText.substring(0, i);
-        // Reemplazamos los \n por <br> justo antes de mostrarlo
-        h1.innerHTML = partial.replace(/\n/g, "<br>");
-        i++;
-        setTimeout(type, 80);
-      } else {
-        h1.style.borderRight = "none";
-      }
+  function type() {
+    if (i <= rawText.length) {
+      // Tomamos solo la parte escrita hasta ahora
+      const partial = rawText.substring(0, i);
+      // Reemplazamos los \n por <br> justo antes de mostrarlo
+      h1.innerHTML = partial.replace(/\n/g, "<br>");
+      i++;
+      setTimeout(type, 80);
+    } else {
+      h1.style.borderRight = "none";
     }
+  }
 
-    type();
+  type();
 
 });
