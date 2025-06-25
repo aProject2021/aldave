@@ -1121,6 +1121,9 @@ textarea:not(:placeholder-shown)+label {
 }
 
 @media (max-width: 768px) {
+  .footer-contact{
+    padding: 80px 30px;
+  }
   .footer-icon img {
     width: 55px;
     height: 55px;
