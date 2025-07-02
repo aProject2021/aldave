@@ -1,0 +1,206 @@
+/*======================FOOTER====================*/
+.footer-contact {
+    background: linear-gradient(to right, #f26a00, #902278);
+    color: #fff;
+    padding: 80px 60px;
+    font-family: 'lato-regular';
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-left h2 {
+    font-family: 'circular-sdk-black';
+    margin-bottom: 30px;
+    font-size: 64px;
+}
+
+.footer-libro {
+    text-decoration: none;
+    padding-top: 1rem;
+}
+
+.footer-libro img {
+    width: 55px;
+    height: 55px;
+}
+
+.footer-left h2 span {
+    display: block;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.footer-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+    flex: 1;
+}
+
+input,
+textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding: 10px 0 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group label {
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+input:focus+label,
+input:not(:placeholder-shown)+label,
+textarea:focus+label,
+textarea:not(:placeholder-shown)+label {
+    top: -15px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.footer-icon {
+    padding-bottom: 2rem;
+}
+
+.footer-icon img {
+    width: 150px;
+    height: 150px;
+}
+
+.btn-submit {
+    align-self: center;
+    /* <-- antes era flex-end */
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-group-info-movil {
+    display: none;
+}
+
+.footer-group-info-desktop {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .footer-contact {
+        padding: 80px 30px;
+    }
+
+    .footer-icon img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .footer-left h2 {
+        font-size: 40px;
+    }
+
+    .footer-group-info-desktop {
+        display: none;
+    }
+
+    .btn-submit {
+        margin-top: 0px;
+    }
+
+    .footer-group-info-movil {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-social {
+        gap: 70px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-libro {
+        padding-top: 0px;
+    }
+}
+
+/*======================END FOOTER====================*/

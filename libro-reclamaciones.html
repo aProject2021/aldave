@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro de Reclamaciones</title>
+    <link rel="stylesheet" href="asset/css/libro.css" />
+</head>
+
+<body>
+    <main class="reclamos-wrapper">
+        <header>
+            <img src="asset/img/logo/logoaldavenaranja.png" alt="Aldave logo" class="logo" />
+            <h1>LIBRO DE RECLAMACIONES</h1>
+        </header>
+
+        <section class="form-seccion">
+            <h2>1. Datos del consumidor</h2>
+            <form>
+                <div class="grid">
+                    <div class="campo">
+                        <label>Tipo de Documento</label>
+                        <select>
+                            <option value="DNI">DNI</option>
+                            <option value="CE">CARNET EXT.</option>
+                            <option value="RUC">RUC</option>
+                            <option value="PASAPORTE">PASAPORTE</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label>Número de Documento</label>
+                        <input type="text" />
+                    </div>
+                    <div class="campo">
+                        <label>Apellido Paterno</label>
+                        <input type="text" />
+                    </div>
+                    <div class="campo">
+                        <label>Apellido Materno</label>
+                        <input type="text" />
+                    </div>
+
+                </div>
+                <div class="campo">
+                    <label>Nombres</label>
+                    <input type="text" />
+                </div>
+                <div class="campo">
+                    <label>Dirección</label>
+                    <input type="text" />
+                </div>
+                <div class="grid">
+                    <div class="campo">
+                        <label>Teléfono</label>
+                        <input type="tel" />
+                    </div>
+                    <div class="campo">
+                        <label>Email</label>
+                        <input type="email" />
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="form-seccion">
+            <h2>2. Identificación del bien contratado</h2>
+            <form>
+                <div class="radio-group">
+                    <label><input type="radio" name="producto" checked /> Producto</label>
+                    <label><input type="radio" name="producto" /> Servicio</label>
+                </div>
+                <div class="campo">
+                    <label>Monto Reclamado</label>
+                    <input type="text" />
+                </div>
+                <div class="campo">
+                    <label>Descripción del bien contratado</label>
+                    <textarea rows="4"></textarea>
+                </div>
+            </form>
+        </section>
+
+        <section class="form-seccion">
+            <h2>3. Detalle de reclamo</h2>
+            <form>
+                <div class="radio-group">
+                    <label><input type="radio" name="tipo" checked /> Reclamo</label>
+                    <span>Disconformidad relacionada a los productos o servicios</span>
+                    <label><input type="radio" name="tipo" /> Queja</label>
+                    <span>Disconformidad no relacionada a los productos o servicios; malestar o descontento respecto a
+                        la atención al público.</span>
+                </div>
+                <div class="grid">
+                    <div class="campo">
+                        <label>Detalle</label>
+                        <textarea rows="4"></textarea>
+                    </div>
+                    <div class="campo">
+                        <label>Pedido</label>
+                        <textarea rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" required /> Estoy de acuerdo con lo ingresado en esta Hoja de
+                        Reclamaciones. Asimismo confirmo que los datos ingresados son tomados como firma de esta
+                        solicitud.
+                    </label>
+                    <label><input type="checkbox" required /> Términos y condiciones</label>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar reclamo</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'lato-regular';
+    src: url("../font/Lato-Regular.ttf") format('woff2');
+}
+
+@font-face {
+    font-family: 'circular-sdk-black';
+    src: url("../font/CircularStd-Black.otf") format('woff2');
+}
+
+@font-face {
+    font-family: 'inter-bold';
+    src: url("../font/Inter_24pt-Bold.ttf") format('woff2');
+}
+
+:root {
+    --primary: #4E008E;
+    --secundary: #FF6600;
+    --text: #585656;
+    --bg: #f2ebea;
+    --bg-white: #FFFFFF;
+    --text-black:#000000;
+}
+
+body {
+    font-family: 'lato-regular';
+    margin: 0;
+    padding: 0;
+}
+
+.reclamos-wrapper {
+    margin: 2rem;
+    padding: 2rem;
+    background: var(--bg);
+    border-radius: 1rem;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'inter-bold';
+    font-size: 36px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.form-seccion {
+    font-size: 20px;
+    background: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'inter-bold';
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    font-size: 20px;
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    outline: none;
+}
+
+select {
+    outline: none;
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 1rem;
+    /* Aumentamos el padding derecho */
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--text);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23000' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary);
+}
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--primary); /* Borde morado */
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #5e169b;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #5e169b; /* Borde morado */
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #5e169b;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.radio-group {
+    font-family: 'lato-regular';
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.radio-group label,
+.checkboxes label {
+    font-family: 'lato-regular';
+    font-size: 20px;
+}
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.btn-primary,
+.btn-alt {
+    font-size: 20px;
+    font-family: 'lato-regular';
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-alt {
+    margin-bottom: 1rem;
+    background: var(--primary);
+}
