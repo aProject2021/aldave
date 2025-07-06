@@ -308,6 +308,7 @@ main {
 
 .comentario-inputs input {
   flex: 1;
+  color: var(--text-black);
   padding: 0.5rem 1.5rem;
   font-family: 'lato-regular';
   font-size: 20px;
@@ -330,6 +331,7 @@ main {
 }
 
 .comentario-textarea {
+  color: var(--text-black);
   padding: 0.5rem 1.5rem;
   font-family: 'lato-regular';
   font-size: 20px;
@@ -372,6 +374,9 @@ button:hover {
 @media (max-width: 768px) {
   .comentario-formulario {
     padding-left: 0px;
+  }
+  .comentario-inputs{
+    flex-direction: column;
   }
 }
 
