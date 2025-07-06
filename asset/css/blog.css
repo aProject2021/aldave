@@ -491,3 +491,20 @@ button:hover {
 }
 
 /*==================================FIN DE INTERESES====================*/
+.logo img {
+  height: 100px;
+  padding-bottom: 0px;
+}
+.navbar{
+  padding-top: 1rem;
+  padding-bottom: 0px;
+}
+.menu-toggle span{
+  background: var(--secundary)
+}
+@media (max-width: 768px) {
+
+}
+.nav-links li a{
+  color: var(--text-white);
+}
