@@ -8,7 +8,6 @@
 
 header {
     position: relative;
-    z-index: 1100;
 }
 
 .navbar {
@@ -41,7 +40,7 @@ header {
 
 /* BOTÓN OUTLINE */
 .btn-outline {
-    border: 2px solid var(--bg-white);
+    border: 2px solid var(--secundary);
     padding: 0.5rem 1rem;
     border-radius: 25px;
     transition: background 0.3s, color 0.3s;

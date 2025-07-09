@@ -375,7 +375,8 @@ button:hover {
   .comentario-formulario {
     padding-left: 0px;
   }
-  .comentario-inputs{
+
+  .comentario-inputs {
     flex-direction: column;
   }
 }
@@ -492,19 +493,28 @@ button:hover {
 
 /*==================================FIN DE INTERESES====================*/
 .logo img {
-  height: 100px;
+  height: 70px;
   padding-bottom: 0px;
 }
-.navbar{
+
+.navbar {
   padding-top: 1rem;
   padding-bottom: 0px;
+  padding-inline: 50px;
 }
-.menu-toggle span{
+
+.menu-toggle span {
   background: var(--secundary)
 }
-@media (max-width: 768px) {
 
-}
-.nav-links li a{
-  color: var(--text-white);
+@media (max-width: 768px) {
+  .navbar{
+    padding-inline: 25px;
+  }
+  .logo img{
+    height: 50px;
+  }
+  .nav-links li a {
+    color: var(--text-white);
+  }
 }
