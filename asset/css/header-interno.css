@@ -1,146 +1,111 @@
-/* Estilos Generales */
-:root {
-    --primary: #4E008E;
-    --secundary: #FF6600;
-    --texto: #585656;
-    --bg-white: #FFFFFF;
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../font/Lato-Regular.ttf") format('woff2');
 }
 
-header {
-    position: relative;
+@font-face {
+  font-family: 'circular-sdk-black';
+  src: url("../font/CircularStd-Black.otf") format('woff2');
 }
 
-.navbar {
+@font-face {
+  font-family: 'inter-bold';
+  src: url("../font/Inter_24pt-Bold.ttf") format('woff2');
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'lato-regular';
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(90deg, #ff6a00, #7b007b);
+    padding: 1.5rem 3rem;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
 }
 
-.logo img {
-    width: 150px;
-    height: 35px;
+/* LOGO */
+.header__logo img {
+    height: 25px;
 }
 
-/* NAV LINKS */
-.nav-links {
+/* NAV */
+.header__nav {
     display: flex;
-    gap: 2rem;
-    list-style: none;
     align-items: center;
+    gap: 32px;
 }
 
-
-
-.nav-links li a {
-    color: var(--secundary);
+.header__nav a {
+    color: #ffffff;
     text-decoration: none;
+    font-size: 16px;
     font-weight: 500;
 }
 
-/* BOTÓN OUTLINE */
-.btn-outline {
-    border: 2px solid var(--secundary);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+/* BOTÓN CONTÁCTANOS */
+.btn-contacto {
+    padding: 8px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 999px;
     transition: background 0.3s, color 0.3s;
-    display: inline-block;
 }
 
-.nav-links-item {
+.btn-contacto:hover {
+    background: #ffffff;
+    color: #7b007b;
+}
+
+/* BOTÓN HAMBURGUESA */
+.header__toggle {
     display: none;
-    color: var(--bg-white);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.btn-outline:hover {
-    background: var(--bg-white);
-    color: var(--primary);
-}
-
-/* MENU TOGGLE (hamburguesa) */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
     cursor: pointer;
-    gap: 6px;
-    z-index: 1200;
 }
 
-.menu-toggle span {
-    height: 2px;
-    width: 25px;
-    background: var(--bg-white);
-    transition: 0.3s;
-}
-
-/* ANIMACIÓN A "X" */
-.menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* OVERLAY */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-}
-
-.overlay.active {
-    display: block;
-}
-
-
-/* RESPONSIVE */
+/* ========================= */
+/* 📱 VERSIÓN MÓVIL */
+/* ========================= */
 @media (max-width: 768px) {
-    .menu-toggle {
+
+    .header__toggle {
+        display: block;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(180deg, #ff6a00, #7b007b);
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px 0;
+        z-index: 100;
+        display: none;
+    }
+
+    .header__nav.active {
         display: flex;
     }
 
-    .logo img {
-        width: 104px;
-        height: 25px;
-    }
-
-    .nav-links-item {
-        display: inline-block;
-    }
-
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background: linear-gradient(135deg, #f60, #7f1d93);
-        height: 100vh;
-        width: 70%;
-        max-width: 300px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        padding: 5rem 2rem;
-        gap: 2rem;
-        z-index: 1100;
-    }
-
-    .nav-links.open {
-        transform: translateX(0);
+    .btn-contacto {
+        border-width: 2px;
     }
 }

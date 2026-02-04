@@ -74,7 +74,7 @@
     min-width: 300px;
 }
 
-form {
+.footer-right form {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -90,12 +90,11 @@ form {
     flex: 1;
 }
 
-input,
-textarea {
+.footer-input{
     width: 100%;
     background: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
+    border: none !important;
+    border-bottom: 1px solid #fff !important;
     color: #fff;
     padding: 10px 0 5px;
     font-size: 1rem;
@@ -108,6 +107,7 @@ textarea {
 
 .form-group label {
     position: absolute;
+    top: 10px;
     left: 0;
     font-size: 1rem;
     color: #fff;
@@ -115,10 +115,11 @@ textarea {
     transition: 0.2s ease all;
 }
 
-input:focus+label,
-input:not(:placeholder-shown)+label,
-textarea:focus+label,
-textarea:not(:placeholder-shown)+label {
+
+.footer-right input:focus+label,
+.footer-right input:not(:placeholder-shown)+label,
+.footer-right textarea:focus+label,
+.footer-right textarea:not(:placeholder-shown)+label {
     top: -15px;
     font-size: 0.8rem;
     color: #fff;
