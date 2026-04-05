@@ -1,0 +1,168 @@
+/* ==================== CONTAINER ==================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+.container--fluid {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ==================== GRID ==================== */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: var(--bp-lg)) {
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: var(--bp-sm)) {
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================== SECTION ==================== */
+.section {
+  padding: var(--space-lg);
+  background-color: var(--color-white);
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.section__title {
+  font-size: var(--fs-2xl);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.section__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.section__left {
+  flex: 1 1 450px;
+  max-width: 50%;
+}
+
+.section__right {
+  flex: 1 1 450px;
+  max-width: 50%;
+}
+
+@media (max-width: var(--bp-md)) {
+  .section {
+    padding: var(--space-md);
+  }
+
+  .section__left,
+  .section__right {
+    flex: none;
+    max-width: 100%;
+  }
+}
+
+/* ==================== FLEX ==================== */
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--gap-sm {
+  gap: var(--space-sm);
+}
+
+.flex--gap-md {
+  gap: var(--space-md);
+}
+
+.flex--gap-lg {
+  gap: var(--space-lg);
+}
+
+/* ==================== VISIBILITY ==================== */
+.hide {
+  display: none;
+}
+
+.hide--mobile {
+  display: none;
+}
+
+.hide--desktop {
+  display: block;
+}
+
+@media (max-width: var(--bp-md)) {
+  .hide--mobile {
+    display: block;
+  }
+
+  .hide--desktop {
+    display: none;
+  }
+}
+
+/* ==================== OVERLAY ==================== */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-overlay);
+  z-index: var(--z-overlay);
+}
+
+.overlay--active {
+  display: block;
+}

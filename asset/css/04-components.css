@@ -1,0 +1,244 @@
+/* ==================== BOTONES ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  opacity: 0.9;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btn--outline-dark {
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: var(--color-secondary);
+}
+
+.btn--outline-dark:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn--ghost {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.btn--submit {
+  align-self: center;
+  margin-top: var(--space-sm);
+  padding: 0.625rem 1.875rem;
+  background: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 20px;
+}
+
+.btn--submit:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn__icon {
+  margin-left: var(--space-xs);
+}
+
+/* ==================== CARDS ==================== */
+.card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.card--hover:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card--flat:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.card__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+.card__bar {
+  height: 10px;
+  background-color: var(--color-secondary);
+}
+
+.card__content {
+  padding: var(--space-sm);
+}
+
+.card__title {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* ==================== FORMULARIOS ==================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form__row {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.form__group {
+  position: relative;
+  flex: 1;
+}
+
+.form__input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-white);
+  color: var(--color-white);
+  padding: 0.625rem 0 0.3125rem;
+  font-size: var(--fs-base);
+  outline: none;
+  transition: var(--transition-base);
+}
+
+.form__input:focus {
+  border-bottom-color: var(--color-secondary);
+}
+
+.form__label {
+  position: absolute;
+  top: 0.625rem;
+  left: 0;
+  font-size: var(--fs-base);
+  color: var(--color-white);
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  top: -0.9375rem;
+  font-size: var(--fs-xs);
+}
+
+.form__textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* ==================== BADGES & ICONS ==================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-lg);
+  color: var(--color-primary);
+}
+
+.badge--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--sm {
+  width: 20px;
+  height: 20px;
+}
+
+.icon--lg {
+  width: 40px;
+  height: 40px;
+}
+
+/* ==================== CIRCLE ==================== */
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-full);
+  width: 115px;
+  height: 115px;
+  font-size: var(--fs-xl);
+  color: var(--color-secondary);
+}
+
+.circle--sm {
+  width: 55px;
+  height: 55px;
+  font-size: var(--fs-lg);
+}
+
+/* ==================== ARROW ==================== */
+.arrow {
+  display: flex;
+  align-items: center;
+  transition: var(--transition-base);
+}
+
+.arrow svg {
+  width: 35px;
+  height: 35px;
+  stroke: var(--color-text);
+  transition: var(--transition-base);
+}
+
+.arrow--right svg {
+  transform: rotate(0deg);
+}
+
+.arrow--down svg {
+  transform: rotate(90deg);
+}
+
+.arrow--active svg {
+  stroke: var(--color-secondary);
+  transform: rotate(45deg);
+}

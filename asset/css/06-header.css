@@ -1,0 +1,272 @@
+/* ==================== HEADER ==================== */
+.header {
+  position: relative;
+  z-index: 1100;
+  padding: 2rem 4rem;
+}
+
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__logo img {
+  width: 150px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.header__menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header__menu li {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu a,
+.header__link {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+  line-height: 1;
+}
+
+.header__menu a:hover,
+.header__link:hover {
+  opacity: 0.8;
+}
+
+.header__menu .btn {
+  padding: 0.8rem 1.2rem; 
+  line-height: 1;
+}
+
+.header__menu .btn--outline {
+  color: #ffffff !important;
+}
+
+.header__menu .btn--outline:hover {
+  background-color: #ffffff;
+  color: #4E008E !important;
+  opacity: 1;
+}
+
+/* ==================== DROPDOWN (Desktop) ==================== */
+.header__dropdown {
+  position: relative;
+}
+
+.header__dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.header__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 0.85rem 0;
+  min-width: 170px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+.header__dropdown:hover .header__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header__dropdown:hover .header__dropdown-toggle svg {
+  transform: rotate(180deg);
+}
+
+.header__dropdown-item {
+  display: block;
+  padding: 0.85rem 1.05rem;
+  color: #4E008E !important;
+  border-radius: 0;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.header__dropdown-item:hover {
+  color: #4E008E !important;
+}
+
+.header__dropdown-menu li a {
+  color: #4E008E !important;
+}
+
+.header__dropdown-menu li {
+  display: block;
+  width: 100%;
+}
+
+.header__dropdown-menu li + li {
+  position: relative;
+  margin-top: 0.25rem;
+  padding-top: 0.55rem;
+}
+
+.header__dropdown-menu li + li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68%;
+  height: 1px;
+  background: #e36f45;
+}
+
+/* ==================== TOGGLE (Hamburguesa) ==================== */
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1200;
+  background: none;
+  border: none;
+}
+
+.header__toggle span {
+  height: 2px;
+  width: 25px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.header__toggle--open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__toggle--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__toggle--open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ==================== MOBILE MENU ==================== */
+.header__menu--mobile {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #f60, #7f1d93);
+  height: 100vh;
+  width: 70%;
+  max-width: 300px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  padding: 5rem 2rem;
+  gap: 0;
+  z-index: 1100;
+}
+
+.header__menu--mobile--open {
+  transform: translateX(0);
+}
+
+.header__menu--mobile li {
+  list-style: none;
+}
+
+.header__menu--mobile > li > a,
+.header__menu--mobile > li > .header__mobile-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+/* ==================== MOBILE DROPDOWN ==================== */
+.header__mobile-dropdown-trigger {
+  cursor: pointer;
+  width: 100%;
+}
+
+.header__mobile-dropdown-trigger svg {
+  transition: transform 0.3s ease;
+  width: 14px;
+  height: 14px;
+  margin-left: auto;
+}
+
+.header__mobile-dropdown-trigger--open svg {
+  transform: rotate(180deg);
+}
+
+.header__mobile-dropdown-menu {
+  display: none;
+  padding-left: 1rem;
+}
+
+.header__mobile-dropdown-menu--open {
+  display: block;
+}
+
+.header__mobile-dropdown-menu li {
+  list-style: none;
+}
+
+.header__mobile-dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ==================== RESPONSIVE - TABLET & MOBILE ==================== */
+@media (max-width: 768px) {
+  .header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header__toggle {
+    display: flex;
+  }
+
+  .header__logo img {
+    width: 104px;
+    height: 25px;
+  }
+
+  .header__menu--desktop {
+    display: none !important;
+  }
+
+  .header__menu--mobile {
+    display: flex;
+  }
+}
+
+/* ==================== RESPONSIVE - DESKTOP ==================== */
+@media (min-width: 769px) {
+  .header__menu--mobile {
+    display: none !important;
+  }
+}

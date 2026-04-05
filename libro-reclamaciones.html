@@ -2,140 +2,149 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description"
-        content="Somos Aldave Studio, una agencia de marketing con enfoque disruptivo y creativo. Impulsamos marcas que buscan destacar en el mundo digital." />
-    <meta name="keywords"
-        content="Agencia de branding, diseño de logotipos, agencia de marketing, desarrollo web profesional, posicionamiento SEO, servicio de redes sociales, Aldave Studio" />
-    <meta name="author" content="Aldave Studio" />
+  <meta name="description"
+    content="Somos Aldave Studio, una agencia de marketing con enfoque disruptivo y creativo. Impulsamos marcas que buscan destacar en el mundo digital." />
+  <meta name="keywords"
+    content="Agencia de branding, diseño de logotipos, agencia de marketing, desarrollo web profesional, posicionamiento SEO, servicio de redes sociales, Aldave Studio" />
+  <meta name="author" content="Aldave Studio" />
 
-    <meta property="og:title" content="Aldave Studio | Agencia de Marketing" />
-    <meta property="og:description"
-        content="Somos Aldave Studio, una agencia creativa y disruptiva en el mundo digital." />
-    <meta property="og:image" content="https://aldavestudio.com/asset/img/icono/apple-touch-icon.png" />
-    <meta property="og:url" content="https://aldavestudio.com/" />
-    <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aldave Studio | Agencia de Marketing" />
+  <meta property="og:description"
+    content="Somos Aldave Studio, una agencia creativa y disruptiva en el mundo digital." />
+  <meta property="og:image" content="https://aldavestudio.com/asset/img/icono/apple-touch-icon.png" />
+  <meta property="og:url" content="https://aldavestudio.com/" />
+  <meta property="og:type" content="website" />
 
-    <title>Aldave Studio | Libro reclamaciones </title>
-    <link rel="icon" type="image/png" sizes="48x48" href="asset/img/icono/favicon-48x48.png">
+  <title>Aldave Studio | Libro reclamaciones </title>
+  <link rel="icon" type="image/png" sizes="48x48" href="asset/img/icono/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="asset/img/icono/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="asset/img/icono/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" href="asset/img/icono/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="asset/img/icono/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="asset/img/icono/favicon.ico">
 
-    <link rel="manifest" href="asset/manifest.json">
-    <link rel="stylesheet" href="asset/css/libro.css" />
+  <link rel="manifest" href="asset/manifest.json">
+  <link rel="stylesheet" href="asset/css/libro.css" />
 </head>
 
 <body>
-    <main class="reclamos-wrapper">
-        <header>
-            <img src="asset/img/logo/logoadldavelarge.png" alt="Aldave logo" class="logo" />
-            <h1>LIBRO DE RECLAMACIONES</h1>
-        </header>
+  <main class="libro">
+    <header class="libro__header">
+      <img src="asset/img/logo/logoadldavelarge.png" alt="Aldave logo" class="libro__logo" />
+      <h1 class="libro__title">LIBRO DE RECLAMACIONES</h1>
+    </header>
 
-        <section class="form-seccion">
-            <h2>1. Datos del consumidor</h2>
-            <form>
-                <div class="grid">
-                    <div class="campo">
-                        <label>Tipo de Documento</label>
-                        <select>
-                            <option value="DNI">DNI</option>
-                            <option value="CE">CARNET EXT.</option>
-                            <option value="RUC">RUC</option>
-                            <option value="PASAPORTE">PASAPORTE</option>
-                        </select>
-                    </div>
-                    <div class="campo">
-                        <label>Número de Documento</label>
-                        <input type="text" />
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="campo">
-                        <label>Apellido Paterno</label>
-                        <input type="text" />
-                    </div>
-                    <div class="campo">
-                        <label>Apellido Materno</label>
-                        <input type="text" />
-                    </div>
+    <section class="libro__section">
+      <h2 class="libro__section-title">1. Datos del consumidor</h2>
+      <form>
+        <div class="libro__grid">
+          <div class="libro__field">
+            <label>Tipo de Documento</label>
+            <select class="libro__select">
+              <option value="DNI">DNI</option>
+              <option value="CE">CARNET EXT.</option>
+              <option value="RUC">RUC</option>
+              <option value="PASAPORTE">PASAPORTE</option>
+            </select>
+          </div>
+          <div class="libro__field">
+            <label>Número de Documento</label>
+            <input type="text" class="libro__input" />
+          </div>
+        </div>
+        <div class="libro__grid">
+          <div class="libro__field">
+            <label>Apellido Paterno</label>
+            <input type="text" class="libro__input" />
+          </div>
+          <div class="libro__field">
+            <label>Apellido Materno</label>
+            <input type="text" class="libro__input" />
+          </div>
+        </div>
+        <div class="libro__field">
+          <label>Nombres</label>
+          <input type="text" class="libro__input" />
+        </div>
+        <div class="libro__field">
+          <label>Dirección</label>
+          <input type="text" class="libro__input" />
+        </div>
+        <div class="libro__grid">
+          <div class="libro__field">
+            <label>Teléfono</label>
+            <input type="tel" class="libro__input" />
+          </div>
+          <div class="libro__field">
+            <label>Email</label>
+            <input type="email" class="libro__input" />
+          </div>
+        </div>
+      </form>
+    </section>
 
-                </div>
-                <div class="campo">
-                    <label>Nombres</label>
-                    <input type="text" />
-                </div>
-                <div class="campo">
-                    <label>Dirección</label>
-                    <input type="text" />
-                </div>
-                <div class="grid">
-                    <div class="campo">
-                        <label>Teléfono</label>
-                        <input type="tel" />
-                    </div>
-                    <div class="campo">
-                        <label>Email</label>
-                        <input type="email" />
-                    </div>
-                </div>
-            </form>
-        </section>
+    <section class="libro__section">
+      <h2 class="libro__section-title">2. Identificación del bien contratado</h2>
+      <form>
+        <div class="libro__radio-group">
+          <label class="libro__radio-label">
+            <input type="radio" name="producto" checked class="libro__radio" /> Producto
+          </label>
+          <label class="libro__radio-label">
+            <input type="radio" name="producto" class="libro__radio" /> Servicio
+          </label>
+        </div>
+        <div class="libro__field">
+          <label>Monto Reclamado</label>
+          <input type="text" class="libro__input" />
+        </div>
+        <div class="libro__field">
+          <label>Descripción del bien contratado</label>
+          <textarea rows="4" class="libro__textarea"></textarea>
+        </div>
+      </form>
+    </section>
 
-        <section class="form-seccion">
-            <h2>2. Identificación del bien contratado</h2>
-            <form>
-                <div class="radio-group">
-                    <label><input type="radio" name="producto" checked /> Producto</label>
-                    <label><input type="radio" name="producto" /> Servicio</label>
-                </div>
-                <div class="campo">
-                    <label>Monto Reclamado</label>
-                    <input type="text" />
-                </div>
-                <div class="campo">
-                    <label>Descripción del bien contratado</label>
-                    <textarea rows="4"></textarea>
-                </div>
-            </form>
-        </section>
+    <section class="libro__section">
+      <h2 class="libro__section-title">3. Detalle de reclamo</h2>
+      <form>
+        <div class="libro__radio-group">
+          <label class="libro__radio-label">
+            <input type="radio" name="tipo" checked class="libro__radio" /> Reclamo
+          </label>
+          <span>Disconformidad relacionada a los productos o servicios</span>
+          <label class="libro__radio-label">
+            <input type="radio" name="tipo" class="libro__radio" /> Queja
+          </label>
+          <span>Disconformidad no relacionada a los productos o servicios; malestar o descontento respecto a
+            la atención al público.</span>
+        </div>
+        <div class="libro__grid">
+          <div class="libro__field">
+            <label>Detalle</label>
+            <textarea rows="4" class="libro__textarea"></textarea>
+          </div>
+          <div class="libro__field">
+            <label>Pedido</label>
+            <textarea rows="4" class="libro__textarea"></textarea>
+          </div>
+        </div>
+        <div class="libro__checkboxes">
+          <label class="libro__checkbox-label">
+            <input type="checkbox" required class="libro__checkbox" /> Estoy de acuerdo con lo ingresado en esta Hoja de
+            Reclamaciones. Asimismo confirmo que los datos ingresados son tomados como firma de esta
+            solicitud.
+          </label>
+          <label class="libro__checkbox-label">
+            <input type="checkbox" required class="libro__checkbox" /> Términos y condiciones
+          </label>
+        </div>
 
-        <section class="form-seccion">
-            <h2>3. Detalle de reclamo</h2>
-            <form>
-                <div class="radio-group">
-                    <label><input type="radio" name="tipo" checked /> Reclamo</label>
-                    <span>Disconformidad relacionada a los productos o servicios</span>
-                    <label><input type="radio" name="tipo" /> Queja</label>
-                    <span>Disconformidad no relacionada a los productos o servicios; malestar o descontento respecto a
-                        la atención al público.</span>
-                </div>
-                <div class="grid">
-                    <div class="campo">
-                        <label>Detalle</label>
-                        <textarea rows="4"></textarea>
-                    </div>
-                    <div class="campo">
-                        <label>Pedido</label>
-                        <textarea rows="4"></textarea>
-                    </div>
-                </div>
-                <div class="checkboxes">
-                    <label>
-                        <input type="checkbox" required /> Estoy de acuerdo con lo ingresado en esta Hoja de
-                        Reclamaciones. Asimismo confirmo que los datos ingresados son tomados como firma de esta
-                        solicitud.
-                    </label>
-                    <label><input type="checkbox" required /> Términos y condiciones</label>
-                </div>
-
-                <button type="submit" class="btn-primary">Enviar reclamo</button>
-            </form>
-        </section>
-    </main>
+        <button type="submit" class="libro__submit">Enviar reclamo</button>
+      </form>
+    </section>
+  </main>
 
 </body>
 

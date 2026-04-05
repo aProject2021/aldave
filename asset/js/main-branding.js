@@ -1,23 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.service-item').forEach(item => {
+    document.querySelectorAll('.service-item').forEach(item => {
     item.addEventListener('click', () => {
-      document.querySelectorAll('.service-item').forEach(el => el.classList.remove('service-item--active'));
-      item.classList.add('service-item--active');
+      document.querySelectorAll('.service-item').forEach(el => el.classList.remove('active'));
+      item.classList.add('active');
 
       const target = item.getAttribute('data-target');
-      document.querySelectorAll('.gallery__image').forEach(img => {
-        img.classList.remove('gallery__image--active');
+      document.querySelectorAll('.gallery .imagen').forEach(img => {
+        img.classList.remove('active');
         if (img.getAttribute('data-id') === target) {
-          img.classList.add('gallery__image--active');
+          img.classList.add('active');
         }
       });
     });
   });
-
   const anchoPantalla = window.innerWidth;
-  let rawText = "El arte de construir marcas\nque hacen la diferencia";
+  let rawText = "Agencia de branding en Perú especializada\nen estrategia y creación de marcas.";
   if (anchoPantalla <= 768) {
-    rawText = "El arte de construir marcas que hacen la diferencia";
+    rawText = "Agencia de branding en Perú especializada en estrategia y creación de marcas.";
   }
 
   const h1 = document.getElementById("typed");
@@ -30,12 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { once: true });
 
   function type() {
+
+
+
     if (i <= rawText.length) {
+      // Tomamos solo la parte escrita hasta ahora
       const partial = rawText.substring(0, i);
+      // Reemplazamos los \n por <br> justo antes de mostrarlo
       h1.innerHTML = partial.replace(/\n/g, "<br>");
       if (audioAllowed) {
+        // Reproducir el audio una sola vez al iniciar
         typeSound.currentTime = 0;
-        audioAllowed = false;
+        audioAllowed = false
         typeSound.play().catch(err => {
           console.log("Audio bloqueado por falta de interacción");
         });
@@ -44,10 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(type, 80);
     } else {
       h1.style.borderRight = "none";
+      // Detener el audio cuando termina de escribir
       typeSound.pause();
       typeSound.currentTime = 0;
     }
   }
 
   type();
+
 });

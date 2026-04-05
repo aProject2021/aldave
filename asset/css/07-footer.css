@@ -1,0 +1,148 @@
+/* ==================== FOOTER ==================== */
+.footer {
+  background: linear-gradient(to right, #f26a00, #902278);
+  color: #ffffff;
+  padding: 5rem 3.75rem;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer__left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer__title {
+  font-family: 'circular-sdk-black', sans-serif;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+.footer__title span {
+  display: block;
+}
+
+.footer__icon img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer__info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.footer__info a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer__social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.footer__social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer__libro {
+  display: block;
+  padding-top: 1rem;
+}
+
+.footer__libro img {
+  width: 55px;
+  height: 55px;
+}
+
+.footer__right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__mobile-info {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer__left,
+  .footer__right {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer__icon img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .footer__title {
+    font-size: 2.25rem;
+  }
+
+  .footer__desktop-info {
+    display: none;
+  }
+
+  .footer__mobile-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footer__social {
+    gap: 4.375rem;
+  }
+
+  .footer__info {
+    text-align: center;
+  }
+
+  .footer__libro {
+    padding-top: 0;
+  }
+
+  .footer__form {
+    gap: 1.5rem;
+  }
+}

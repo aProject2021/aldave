@@ -1,0 +1,70 @@
+/* ==================== FUENTES PERSONALIZADAS ==================== */
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../font/Lato-Regular.ttf") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'circular-sdk-black';
+  src: url("../font/CircularStd-Black.otf") format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'inter-bold';
+  src: url("../font/Inter_24pt-Bold.ttf") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==================== ESCALA TIPOGRÁFICA ==================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: var(--fs-4xl);
+}
+
+h2 {
+  font-size: var(--fs-3xl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+p {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+.text--display {
+  font-family: var(--font-display);
+}
+
+.text--primary {
+  color: var(--color-primary);
+}
+
+.text--secondary {
+  color: var(--color-secondary);
+}
+
+.text--white {
+  color: var(--color-white);
+}
